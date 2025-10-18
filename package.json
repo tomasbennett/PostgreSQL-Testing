@@ -1,0 +1,19 @@
+{
+  "name": "postgresql-testing",
+  "version": "1.0.0",
+  "description": "This will simply test my ability to connect to a postgreSQL database through an express application.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}
