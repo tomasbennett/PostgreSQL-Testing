@@ -1,9 +1,14 @@
+require('dotenv').config();
 const { Pool } = require("pg");
 
+const encodedPassword = encodeURIComponent(process.env.AIVEN_DATABASE_PASSWORD);
+
+
 module.exports = new Pool({
-    host: "localhost",
-    user: "tjsbe",
-    database: "top_users",
-    password: process.env.DATABASE_PASSWORD,
-    port: 5432
+    user: process.env.AIVEN_DATABASE_USER,
+    host: process.env.AIVEN_DATABASE_HOST,
+    database: process.env.AIVEN_DATABASE_DATABASE_NAME,
+    password: process.env.AIVEN_DATABASE_PASSWORD,
+    port: Number(process.env.AIVEN_DATABASE_PORT),
+    ssl: { rejectUnauthorized: false }
 });
